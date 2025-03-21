@@ -1,5 +1,7 @@
 # projeto-integrador
 Projeto integrador para o curso de Sistemas para Internet - UERN
+
+Para acessar o código do projeto acesse a página "clibrary"
 ___
 ## O que é?
 Este trabalho é um projeto integrador que tem como objetivo criar uma API RESTful.
@@ -14,11 +16,8 @@ O projeto está sendo realizado em colaboração das seguintes disciplinas:
  
 A principio usarei Django para desenvolver o **Back-End** do projeto pois já tenho familiaridade com Python.
 ___
-### Atividade Prática 1
-prints:
-pasta raiz
-![[Captura de tela de 2025-03-20 22-02-20.png]]
-rota livros funcionando no postman
-![[Captura de tela de 2025-03-20 22-02-44.png]]
-código views
-![[Captura de tela de 2025-03-20 22-03-02.png]]
+## Atividade Prática 1
+print's de funcionamento.
+![Captura de tela de 2025-03-20 22-03-02](https://github.com/user-attachments/assets/34171f92-d4a1-4351-80f5-982caf66c3d9)
+![Captura de tela de 2025-03-20 22-02-44](https://github.com/user-attachments/assets/035673c6-a96a-462a-8dca-173701ba66a4)
+![Captura de tela de 2025-03-20 22-02-20](https://github.com/user-attachments/assets/90633443-d4ef-4e88-b6d9-10cf61998adf)
