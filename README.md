@@ -13,3 +13,12 @@ O projeto está sendo realizado em colaboração das seguintes disciplinas:
 - Elicitação e Análise de Requisitos
  
 A principio usarei Django para desenvolver o **Back-End** do projeto pois já tenho familiaridade com Python.
+___
+### Atividade Prática 1
+prints:
+pasta raiz
+![[Captura de tela de 2025-03-20 22-02-20.png]]
+rota livros funcionando no postman
+![[Captura de tela de 2025-03-20 22-02-44.png]]
+código views
+![[Captura de tela de 2025-03-20 22-03-02.png]]
