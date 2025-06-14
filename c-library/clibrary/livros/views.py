@@ -43,3 +43,34 @@ def buscar_livro(request, id):
 
 ## UPDATE
 
+def atualizar_livro(request, id):
+    if request.method == 'PUT':
+        try:
+            dados = json.loads(request.body)
+            titulo = dados.get('titulo')
+            autor = dados.get('autor')
+            if not titulo or not autor:
+                return JsonResponse({'error': 'Título e autor são obrigatórios.'}, status=400)
+            # Sanitização
+            sanitized_titulo = bleach.clean(titulo, tags=[], attributes={})
+            sanitized_autor = bleach.clean(autor, tags=[], attributes={})
+            livro_atualizado = Livro.objects.filter(pk=id).update(titulo=sanitized_titulo, autor=sanitized_autor)
+            if livro_atualizado == 0:
+                return JsonResponse({'error': 'Livro não encontrado.'}, status=404)
+            return JsonResponse({'message': 'Livro atualizado com sucesso.'})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+    return JsonResponse({'error': 'Método não permitido'}, status=405)
+
+## DELETE
+def deletar_livro(request, id):
+    if request.method == 'DELETE':
+        try:
+            livro = Livro.objects.get(pk=id)
+            livro.delete()
+            return JsonResponse({'message': 'Livro deletado com sucesso.'})
+        except Livro.DoesNotExist:
+            return JsonResponse({'error': 'Livro não encontrado.'}, status=404)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+    return JsonResponse({'error': 'Método não permitido'}, status=405)
